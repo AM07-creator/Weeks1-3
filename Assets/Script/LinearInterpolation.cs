@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class LinearInterpolation : MonoBehaviour
 {
+    //Added bonus: The pellet follows the crosshair/mouse, so you can actually make your shots hit animals instead of going to a set location.
 
     public Transform start;
     public Transform end;
