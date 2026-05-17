@@ -3,7 +3,7 @@ using UnityEngine;
 public class FirstScript : MonoBehaviour
 {
     public float speed = 0.01f;
-    //public float speed2 = 0.01f;
+    public float speed2 = 0.01f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,7 +20,7 @@ public class FirstScript : MonoBehaviour
         transform.position = newPos;
 
         Vector2 newPos2 = transform.position;
-        newPos2.y += speed;
+        newPos2.y += speed2;
         transform.position = newPos2;
 
         //Check if shape is at screen edge for both axes
@@ -32,7 +32,7 @@ public class FirstScript : MonoBehaviour
 		Vector2 screenPos2 = Camera.main.WorldToScreenPoint(transform.position);
 		if (screenPos2.y < 0 || screenPos2.y > Screen.height)
 		{
-			speed = speed * -1;
+			speed2 = speed2 * -1;
 		}
 	}
 }
