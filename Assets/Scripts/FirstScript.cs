@@ -3,6 +3,7 @@ using UnityEngine;
 public class FirstScript : MonoBehaviour
 {
     public float speed = 0.01f;
+    //public float speed2 = 0.01f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,7 +30,7 @@ public class FirstScript : MonoBehaviour
             speed = speed * -1;
         }
 		Vector2 screenPos2 = Camera.main.WorldToScreenPoint(transform.position);
-		if (screenPos.y < 0 || screenPos.y > Screen.height)
+		if (screenPos2.y < 0 || screenPos2.y > Screen.height)
 		{
 			speed = speed * -1;
 		}
