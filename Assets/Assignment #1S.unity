@@ -353,6 +353,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1141901362}
   - component: {fileID: 1141901361}
+  - component: {fileID: 1141901363}
   m_Layer: 0
   m_Name: Bunny
   m_TagString: Untagged
@@ -430,6 +431,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1141901363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141901360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38231d1a7633bb249bde0b97a28bffea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.1
 --- !u!1 &1332250699
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,6 +485,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1337064287}
   - component: {fileID: 1337064286}
+  - component: {fileID: 1337064288}
   m_Layer: 0
   m_Name: Deer
   m_TagString: Untagged
@@ -548,6 +563,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1337064288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337064285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38231d1a7633bb249bde0b97a28bffea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.05
 --- !u!1 &1510825091
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,6 +585,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1510825092}
+  - component: {fileID: 1510825093}
   m_Layer: 0
   m_Name: Crosshair
   m_TagString: Untagged
@@ -581,6 +610,18 @@ Transform:
   - {fileID: 1779882053}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1510825093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510825091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ee19ef0a7ebe924184ba70805535003, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1543028606
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,6 +632,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1543028608}
   - component: {fileID: 1543028607}
+  - component: {fileID: 1543028609}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -641,9 +683,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -663,11 +705,50 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1543028609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543028606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f90736141805eeb40913b0a06121e75c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  empty: {fileID: 1332250700}
+  crosshair: {fileID: 1510825092}
+  t: 0
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1628054578
 GameObject:
   m_ObjectHideFlags: 0
